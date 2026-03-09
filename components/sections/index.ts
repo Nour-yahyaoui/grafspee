@@ -1,0 +1,6 @@
+export { Hero } from './hero'
+export { Features, FeatureCards } from './features'
+export { Pricing } from './pricing'
+export { Testimonials, TestimonialHighlight } from './testimonials'
+export { FAQ } from './faq'
+export { CTA } from './cta'
