@@ -57,20 +57,20 @@ export function CodeBlock({
           )}
           {...props}
         >
-          <code className="text-foreground block">
+          <code className="text-foreground block w-max min-w-full">
             {showLineNumbers
               ? lines.map((line, i) => (
-                  <div key={i} className="flex min-w-max">
+                  <div key={i} className="flex">
                     <span className="w-8 shrink-0 select-none text-muted-foreground text-right pr-4 sticky left-0 bg-muted/50">
                       {i + 1}
                     </span>
-                    <span className="whitespace-pre-wrap break-all md:whitespace-pre">
+                    <span className="whitespace-pre">
                       {line || ' '}
                     </span>
                   </div>
                 ))
               : code.trim().split('\n').map((line, i) => (
-                  <div key={i} className="min-w-max whitespace-pre-wrap break-all md:whitespace-pre">
+                  <div key={i} className="whitespace-pre">
                     {line || ' '}
                   </div>
                 ))}

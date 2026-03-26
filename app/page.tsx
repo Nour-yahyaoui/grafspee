@@ -1,39 +1,105 @@
-'use client'
-import { 
-  Zap, Shield, Rocket, Code, Layers, Globe, 
-  ChevronDown, Mail, Settings, User, Home as H, Bell,
-  AlertCircle, CheckCircle, Info, AlertTriangle,
-  Menu, X, Plus, Search, Star, Trash, Edit,
-  Calendar as CalendarIcon, Clock, Download, Upload, FileText,
-  Moon, Sun, LogOut, Github, Twitter, Facebook, Instagram,
-  Heart, Share, MoreHorizontal, Filter, RefreshCw,
-  Box, Cpu, Database, Cloud, Lock, Users,
-  Briefcase, Award, TrendingUp, Target, Compass, Map,
-  Bold, Italic, Underline, Inbox, DollarSign,
-  Copy
-} from 'lucide-react'
+"use client";
+import {
+  Zap,
+  Shield,
+  Rocket,
+  Code,
+  Layers,
+  Globe,
+  ChevronDown,
+  Mail,
+  Settings,
+  User,
+  Home as H,
+  Bell,
+  AlertCircle,
+  CheckCircle,
+  Info,
+  AlertTriangle,
+  Menu,
+  X,
+  Plus,
+  Search,
+  Star,
+  Trash,
+  Edit,
+  Calendar as CalendarIcon,
+  Clock,
+  Download,
+  Upload,
+  FileText,
+  Moon,
+  Sun,
+  LogOut,
+  Github,
+  Twitter,
+  Facebook,
+  Instagram,
+  Heart,
+  Share,
+  MoreHorizontal,
+  Filter,
+  RefreshCw,
+  Box,
+  Cpu,
+  Database,
+  Cloud,
+  Lock,
+  Users,
+  Briefcase,
+  Award,
+  TrendingUp,
+  Target,
+  Compass,
+  Map,
+  Bold,
+  Italic,
+  Underline,
+  Inbox,
+  DollarSign,
+  Copy,
+} from "lucide-react";
 
-import { Header } from '@/components/layout/header'
-import { Footer } from '@/components/layout/footer'
-import { Container } from '@/components/layout/container'
-import { Section, SectionHeader } from '@/components/layout/section'
-import { Hero } from '@/components/sections/hero'
-import { CodeBlock } from '@/components/ui/code-block'
+import { Header } from "@/components/layout/header";
+import { Footer } from "@/components/layout/footer";
+import { Container } from "@/components/layout/container";
+import { Section, SectionHeader } from "@/components/layout/section";
+import { Hero } from "@/components/sections/hero";
+import { CodeBlock } from "@/components/ui/code-block";
 
 // UI Components
-import { Button } from '@/components/ui/button'
-import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, CardAction } from '@/components/ui/card'
-import { Badge } from '@/components/ui/badge'
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
-import { Input } from '@/components/ui/input'
-import { Label } from '@/components/ui/label'
-import { Checkbox } from '@/components/ui/checkbox'
-import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group'
-import { Switch } from '@/components/ui/switch'
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
-import { Separator } from '@/components/ui/separator'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+  CardContent,
+  CardFooter,
+  CardAction,
+} from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Checkbox } from "@/components/ui/checkbox";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { Switch } from "@/components/ui/switch";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { Separator } from "@/components/ui/separator";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import {
   AlertDialog,
   AlertDialogAction,
@@ -44,7 +110,7 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
   AlertDialogTrigger,
-} from '@/components/ui/alert-dialog'
+} from "@/components/ui/alert-dialog";
 import {
   Dialog,
   DialogContent,
@@ -54,7 +120,7 @@ import {
   DialogTitle,
   DialogTrigger,
   DialogClose,
-} from '@/components/ui/dialog'
+} from "@/components/ui/dialog";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -64,23 +130,23 @@ import {
   DropdownMenuTrigger,
   DropdownMenuGroup,
   DropdownMenuShortcut,
-} from '@/components/ui/dropdown-menu'
+} from "@/components/ui/dropdown-menu";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from '@/components/ui/tooltip'
+} from "@/components/ui/tooltip";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from '@/components/ui/popover'
+} from "@/components/ui/popover";
 import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
-} from '@/components/ui/hover-card'
+} from "@/components/ui/hover-card";
 import {
   Command,
   CommandDialog,
@@ -91,7 +157,7 @@ import {
   CommandList,
   CommandSeparator,
   CommandShortcut,
-} from '@/components/ui/command'
+} from "@/components/ui/command";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -100,7 +166,7 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
   BreadcrumbEllipsis,
-} from '@/components/ui/breadcrumb'
+} from "@/components/ui/breadcrumb";
 import {
   Sheet,
   SheetContent,
@@ -110,10 +176,10 @@ import {
   SheetTrigger,
   SheetClose,
   SheetFooter,
-} from '@/components/ui/sheet'
-import { Progress } from '@/components/ui/progress'
-import { Slider } from '@/components/ui/slider'
-import { Textarea } from '@/components/ui/textarea'
+} from "@/components/ui/sheet";
+import { Progress } from "@/components/ui/progress";
+import { Slider } from "@/components/ui/slider";
+import { Textarea } from "@/components/ui/textarea";
 import {
   Pagination,
   PaginationContent,
@@ -122,7 +188,7 @@ import {
   PaginationLink,
   PaginationNext,
   PaginationPrevious,
-} from '@/components/ui/pagination'
+} from "@/components/ui/pagination";
 import {
   Table,
   TableBody,
@@ -131,48 +197,71 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from '@/components/ui/table'
+} from "@/components/ui/table";
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+import { Skeleton } from "@/components/ui/skeleton";
+import { Toaster } from "@/components/ui/sonner";
+import { toast } from "sonner";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { ScrollArea } from "@/components/ui/scroll-area";
+import { Calendar } from "@/components/ui/calendar";
+import { Toggle } from "@/components/ui/toggle";
+import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
+import { Spinner } from "@/components/ui/spinner";
+import { Kbd, KbdGroup } from "@/components/ui/kbd";
 import {
-  Alert,
-  AlertDescription,
-  AlertTitle,
-} from '@/components/ui/alert'
-import { Skeleton } from '@/components/ui/skeleton'
-import { Toaster } from '@/components/ui/sonner'
-import { toast } from 'sonner'
-import { AspectRatio } from '@/components/ui/aspect-ratio'
-import { ScrollArea } from '@/components/ui/scroll-area'
-import { Calendar } from '@/components/ui/calendar'
-import { Toggle } from '@/components/ui/toggle'
-import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group'
-import { Spinner } from '@/components/ui/spinner'
-import { Kbd, KbdGroup } from '@/components/ui/kbd'
-import { Empty, EmptyHeader, EmptyTitle, EmptyDescription, EmptyContent, EmptyMedia } from '@/components/ui/empty'
-import { ErrorState } from '@/components/ui/error-state'
-import { Loader } from '@/components/ui/loader'
-import { InputGroup, InputGroupAddon, InputGroupButton, InputGroupText, InputGroupInput } from '@/components/ui/input-group'
-import { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator } from '@/components/ui/input-otp'
-import { ButtonGroup, ButtonGroupSeparator } from '@/components/ui/button-group'
-import { SearchBar } from '@/components/ui/search-bar'
-import { CopyButton } from '@/components/ui/copy-button'
-import { CodeBlock as CodeBlockComponent } from '@/components/ui/code-block'
+  Empty,
+  EmptyHeader,
+  EmptyTitle,
+  EmptyDescription,
+  EmptyContent,
+  EmptyMedia,
+} from "@/components/ui/empty";
+import { ErrorState } from "@/components/ui/error-state";
+import { Loader } from "@/components/ui/loader";
+import {
+  InputGroup,
+  InputGroupAddon,
+  InputGroupButton,
+  InputGroupText,
+  InputGroupInput,
+} from "@/components/ui/input-group";
+import {
+  InputOTP,
+  InputOTPGroup,
+  InputOTPSlot,
+  InputOTPSeparator,
+} from "@/components/ui/input-otp";
+import {
+  ButtonGroup,
+  ButtonGroupSeparator,
+} from "@/components/ui/button-group";
+import { SearchBar } from "@/components/ui/search-bar";
+import { CopyButton } from "@/components/ui/copy-button";
+import { CodeBlock as CodeBlockComponent } from "@/components/ui/code-block";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselPrevious,
   CarouselNext,
-} from '@/components/ui/carousel'
+} from "@/components/ui/carousel";
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect } from "react";
 
 // Create a client-only wrapper for Calendar to prevent hydration mismatch
-function ClientCalendar({ date, onSelect }: { date?: Date; onSelect?: (date: Date | undefined) => void }) {
-  const [isMounted, setIsMounted] = useState(false)
+function ClientCalendar({
+  date,
+  onSelect,
+}: {
+  date?: Date;
+  onSelect?: (date: Date | undefined) => void;
+}) {
+  const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
-    setIsMounted(true)
-  }, [])
+    setIsMounted(true);
+  }, []);
 
   if (!isMounted) {
     return (
@@ -181,7 +270,7 @@ function ClientCalendar({ date, onSelect }: { date?: Date; onSelect?: (date: Dat
           <Skeleton className="h-[280px] w-[280px]" />
         </div>
       </div>
-    )
+    );
   }
 
   return (
@@ -191,26 +280,26 @@ function ClientCalendar({ date, onSelect }: { date?: Date; onSelect?: (date: Dat
       onSelect={onSelect}
       className="rounded-md border"
     />
-  )
+  );
 }
 
 export default function Home() {
-  const [date, setDate] = useState<Date>()
-  const [sliderValue, setSliderValue] = useState([50])
-  const [commandOpen, setCommandOpen] = useState(false)
+  const [date, setDate] = useState<Date>();
+  const [sliderValue, setSliderValue] = useState([50]);
+  const [commandOpen, setCommandOpen] = useState(false);
 
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      
+
       <main className="flex-1">
         {/* Hero Section */}
         <Hero
           badge="Grafspee v2.0"
           title="Build faster with 60+ components"
           description="A complete UI toolkit with live examples, code snippets, and production-ready components. Perfect for building modern web applications."
-          primaryAction={{ label: 'Get Started', href: '#components' }}
-          secondaryAction={{ label: 'View on GitHub', href: '#' }}
+          primaryAction={{ label: "Get Started", href: "#components" }}
+          secondaryAction={{ label: "View on GitHub", href: "#" }}
         />
 
         <Container className="py-12">
@@ -226,9 +315,15 @@ export default function Home() {
           <CommandList>
             <CommandEmpty>No results found.</CommandEmpty>
             <CommandGroup heading="Suggestions">
-              <CommandItem onSelect={() => setCommandOpen(false)}>Calendar</CommandItem>
-              <CommandItem onSelect={() => setCommandOpen(false)}>Search Emails</CommandItem>
-              <CommandItem onSelect={() => setCommandOpen(false)}>Calculator</CommandItem>
+              <CommandItem onSelect={() => setCommandOpen(false)}>
+                Calendar
+              </CommandItem>
+              <CommandItem onSelect={() => setCommandOpen(false)}>
+                Search Emails
+              </CommandItem>
+              <CommandItem onSelect={() => setCommandOpen(false)}>
+                Calculator
+              </CommandItem>
             </CommandGroup>
           </CommandList>
         </CommandDialog>
@@ -238,9 +333,12 @@ export default function Home() {
           <Container>
             <div className="space-y-6">
               <div className="space-y-2">
-                <h2 className="text-2xl font-semibold tracking-tight">Button</h2>
+                <h2 className="text-2xl font-semibold tracking-tight">
+                  Button
+                </h2>
                 <p className="text-muted-foreground">
-                  Reusable button component with multiple variants, sizes, and states.
+                  Reusable button component with multiple variants, sizes, and
+                  states.
                 </p>
               </div>
 
@@ -258,7 +356,7 @@ export default function Home() {
                     <Button variant="ghost">Ghost</Button>
                     <Button variant="link">Link</Button>
                   </div>
-                  
+
                   <div className="flex flex-wrap gap-4">
                     <Button size="sm">Small</Button>
                     <Button size="default">Default</Button>
@@ -300,7 +398,9 @@ export default function Home() {
           <Container>
             <div className="space-y-6">
               <div className="space-y-2">
-                <h2 className="text-2xl font-semibold tracking-tight">Button Group</h2>
+                <h2 className="text-2xl font-semibold tracking-tight">
+                  Button Group
+                </h2>
                 <p className="text-muted-foreground">
                   Group multiple buttons together horizontally or vertically.
                 </p>
@@ -401,11 +501,17 @@ import { Button } from "@/components/ui/button"
                     <Badge variant="destructive">Destructive</Badge>
                     <Badge variant="outline">Outline</Badge>
                   </div>
-                  
+
                   <div className="flex flex-wrap gap-4">
-                    <Badge className="bg-green-500 hover:bg-green-600">Success</Badge>
-                    <Badge className="bg-yellow-500 hover:bg-yellow-600">Warning</Badge>
-                    <Badge className="bg-blue-500 hover:bg-blue-600">Info</Badge>
+                    <Badge className="bg-green-500 hover:bg-green-600">
+                      Success
+                    </Badge>
+                    <Badge className="bg-yellow-500 hover:bg-yellow-600">
+                      Warning
+                    </Badge>
+                    <Badge className="bg-blue-500 hover:bg-blue-600">
+                      Info
+                    </Badge>
                   </div>
                 </CardContent>
                 <CardFooter className="flex-col items-start gap-4">
@@ -452,20 +558,32 @@ import { Button } from "@/components/ui/button"
                       <Label htmlFor="default">Default</Label>
                       <Input id="default" placeholder="Enter text..." />
                     </div>
-                    
+
                     <div className="grid gap-2">
                       <Label htmlFor="email">Email</Label>
-                      <Input id="email" type="email" placeholder="email@example.com" />
+                      <Input
+                        id="email"
+                        type="email"
+                        placeholder="email@example.com"
+                      />
                     </div>
-                    
+
                     <div className="grid gap-2">
                       <Label htmlFor="password">Password</Label>
-                      <Input id="password" type="password" placeholder="••••••••" />
+                      <Input
+                        id="password"
+                        type="password"
+                        placeholder="••••••••"
+                      />
                     </div>
-                    
+
                     <div className="grid gap-2">
                       <Label htmlFor="disabled">Disabled</Label>
-                      <Input id="disabled" disabled placeholder="Disabled input" />
+                      <Input
+                        id="disabled"
+                        disabled
+                        placeholder="Disabled input"
+                      />
                     </div>
                   </div>
                 </CardContent>
@@ -499,7 +617,9 @@ import { Label } from "@/components/ui/label"
           <Container>
             <div className="space-y-6">
               <div className="space-y-2">
-                <h2 className="text-2xl font-semibold tracking-tight">Input Group</h2>
+                <h2 className="text-2xl font-semibold tracking-tight">
+                  Input Group
+                </h2>
                 <p className="text-muted-foreground">
                   Group inputs with addons and buttons.
                 </p>
@@ -565,7 +685,9 @@ import { Label } from "@/components/ui/label"
           <Container>
             <div className="space-y-6">
               <div className="space-y-2">
-                <h2 className="text-2xl font-semibold tracking-tight">Input OTP</h2>
+                <h2 className="text-2xl font-semibold tracking-tight">
+                  Input OTP
+                </h2>
                 <p className="text-muted-foreground">
                   One-time password input component.
                 </p>
@@ -625,7 +747,9 @@ import { Label } from "@/components/ui/label"
           <Container>
             <div className="space-y-6">
               <div className="space-y-2">
-                <h2 className="text-2xl font-semibold tracking-tight">Textarea</h2>
+                <h2 className="text-2xl font-semibold tracking-tight">
+                  Textarea
+                </h2>
                 <p className="text-muted-foreground">
                   Multi-line text input field.
                 </p>
@@ -640,12 +764,19 @@ import { Label } from "@/components/ui/label"
                   <div className="grid gap-4 max-w-sm">
                     <div className="grid gap-2">
                       <Label htmlFor="bio">Bio</Label>
-                      <Textarea id="bio" placeholder="Tell us about yourself..." />
+                      <Textarea
+                        id="bio"
+                        placeholder="Tell us about yourself..."
+                      />
                     </div>
-                    
+
                     <div className="grid gap-2">
                       <Label htmlFor="disabled">Disabled</Label>
-                      <Textarea id="disabled" placeholder="Cannot edit" disabled />
+                      <Textarea
+                        id="disabled"
+                        placeholder="Cannot edit"
+                        disabled
+                      />
                     </div>
                   </div>
                 </CardContent>
@@ -673,7 +804,9 @@ import { Label } from "@/components/ui/label"
           <Container>
             <div className="space-y-6">
               <div className="space-y-2">
-                <h2 className="text-2xl font-semibold tracking-tight">Select</h2>
+                <h2 className="text-2xl font-semibold tracking-tight">
+                  Select
+                </h2>
                 <p className="text-muted-foreground">
                   Dropdown selection component.
                 </p>
@@ -700,7 +833,7 @@ import { Label } from "@/components/ui/label"
                         </SelectContent>
                       </Select>
                     </div>
-                    
+
                     <div className="grid gap-2">
                       <Label>Disabled</Label>
                       <Select disabled>
@@ -739,7 +872,9 @@ import { Label } from "@/components/ui/label"
           <Container>
             <div className="space-y-6">
               <div className="space-y-2">
-                <h2 className="text-2xl font-semibold tracking-tight">Checkbox</h2>
+                <h2 className="text-2xl font-semibold tracking-tight">
+                  Checkbox
+                </h2>
                 <p className="text-muted-foreground">
                   Checkbox for multiple selections.
                 </p>
@@ -755,15 +890,17 @@ import { Label } from "@/components/ui/label"
                     <Checkbox id="terms" />
                     <Label htmlFor="terms">Accept terms</Label>
                   </div>
-                  
+
                   <div className="flex items-center space-x-2">
                     <Checkbox id="newsletter" defaultChecked />
                     <Label htmlFor="newsletter">Subscribe to newsletter</Label>
                   </div>
-                  
+
                   <div className="flex items-center space-x-2">
                     <Checkbox id="disabled" disabled />
-                    <Label htmlFor="disabled" className="text-muted-foreground">Disabled option</Label>
+                    <Label htmlFor="disabled" className="text-muted-foreground">
+                      Disabled option
+                    </Label>
                   </div>
                 </CardContent>
                 <CardFooter className="flex-col items-start gap-4">
@@ -794,7 +931,9 @@ import { Label } from "@/components/ui/label"
           <Container>
             <div className="space-y-6">
               <div className="space-y-2">
-                <h2 className="text-2xl font-semibold tracking-tight">Radio Group</h2>
+                <h2 className="text-2xl font-semibold tracking-tight">
+                  Radio Group
+                </h2>
                 <p className="text-muted-foreground">
                   Radio buttons for single selection.
                 </p>
@@ -846,7 +985,9 @@ import { Label } from "@/components/ui/label"
           <Container>
             <div className="space-y-6">
               <div className="space-y-2">
-                <h2 className="text-2xl font-semibold tracking-tight">Switch</h2>
+                <h2 className="text-2xl font-semibold tracking-tight">
+                  Switch
+                </h2>
                 <p className="text-muted-foreground">
                   Toggle switch for binary settings.
                 </p>
@@ -862,15 +1003,17 @@ import { Label } from "@/components/ui/label"
                     <Switch id="airplane" />
                     <Label htmlFor="airplane">Airplane Mode</Label>
                   </div>
-                  
+
                   <div className="flex items-center space-x-4">
                     <Switch id="notifications" defaultChecked />
                     <Label htmlFor="notifications">Enable Notifications</Label>
                   </div>
-                  
+
                   <div className="flex items-center space-x-4">
                     <Switch id="disabled" disabled />
-                    <Label htmlFor="disabled" className="text-muted-foreground">Disabled</Label>
+                    <Label htmlFor="disabled" className="text-muted-foreground">
+                      Disabled
+                    </Label>
                   </div>
                 </CardContent>
                 <CardFooter className="flex-col items-start gap-4">
@@ -901,7 +1044,9 @@ import { Label } from "@/components/ui/label"
           <Container>
             <div className="space-y-6">
               <div className="space-y-2">
-                <h2 className="text-2xl font-semibold tracking-tight">Slider</h2>
+                <h2 className="text-2xl font-semibold tracking-tight">
+                  Slider
+                </h2>
                 <p className="text-muted-foreground">
                   Range slider for numeric input.
                 </p>
@@ -916,16 +1061,18 @@ import { Label } from "@/components/ui/label"
                   <div className="space-y-2">
                     <div className="flex justify-between">
                       <Label>Single slider</Label>
-                      <span className="text-sm text-muted-foreground">{sliderValue[0]}%</span>
+                      <span className="text-sm text-muted-foreground">
+                        {sliderValue[0]}%
+                      </span>
                     </div>
-                    <Slider 
-                      value={sliderValue} 
-                      onValueChange={setSliderValue} 
-                      max={100} 
+                    <Slider
+                      value={sliderValue}
+                      onValueChange={setSliderValue}
+                      max={100}
                       step={1}
                     />
                   </div>
-                  
+
                   <div className="space-y-2">
                     <Label>Range slider</Label>
                     <Slider defaultValue={[25, 75]} max={100} step={1} />
@@ -955,7 +1102,9 @@ import { Label } from "@/components/ui/label"
           <Container>
             <div className="space-y-6">
               <div className="space-y-2">
-                <h2 className="text-2xl font-semibold tracking-tight">Progress</h2>
+                <h2 className="text-2xl font-semibold tracking-tight">
+                  Progress
+                </h2>
                 <p className="text-muted-foreground">
                   Show progress indicators.
                 </p>
@@ -974,7 +1123,7 @@ import { Label } from "@/components/ui/label"
                     </div>
                     <Progress value={45} />
                   </div>
-                  
+
                   <div className="space-y-2">
                     <div className="flex justify-between text-sm">
                       <span>Uploading</span>
@@ -1043,7 +1192,9 @@ import { Label } from "@/components/ui/label"
                       <p className="text-sm">Manage preferences.</p>
                       <div className="flex items-center space-x-2">
                         <Checkbox id="notifications" />
-                        <Label htmlFor="notifications">Enable notifications</Label>
+                        <Label htmlFor="notifications">
+                          Enable notifications
+                        </Label>
                       </div>
                     </TabsContent>
                   </Tabs>
@@ -1075,7 +1226,9 @@ import { Label } from "@/components/ui/label"
           <Container>
             <div className="space-y-6">
               <div className="space-y-2">
-                <h2 className="text-2xl font-semibold tracking-tight">Accordion</h2>
+                <h2 className="text-2xl font-semibold tracking-tight">
+                  Accordion
+                </h2>
                 <p className="text-muted-foreground">
                   Collapsible content sections.
                 </p>
@@ -1089,15 +1242,23 @@ import { Label } from "@/components/ui/label"
                 <CardContent>
                   <Accordion type="single" collapsible className="w-full">
                     <AccordionItem value="item-1">
-                      <AccordionTrigger>What is this template?</AccordionTrigger>
+                      <AccordionTrigger>
+                        What is this template?
+                      </AccordionTrigger>
                       <AccordionContent>
-                        This is a comprehensive component library with 60+ reusable components built with React, TypeScript, and Tailwind CSS.
+                        This is a comprehensive component library with 60+
+                        reusable components built with React, TypeScript, and
+                        Tailwind CSS.
                       </AccordionContent>
                     </AccordionItem>
                     <AccordionItem value="item-2">
-                      <AccordionTrigger>How do I customize it?</AccordionTrigger>
+                      <AccordionTrigger>
+                        How do I customize it?
+                      </AccordionTrigger>
                       <AccordionContent>
-                        All components support className props for custom styling. You can also modify the theme in your globals.css file.
+                        All components support className props for custom
+                        styling. You can also modify the theme in your
+                        globals.css file.
                       </AccordionContent>
                     </AccordionItem>
                   </Accordion>
@@ -1143,7 +1304,9 @@ import { Label } from "@/components/ui/label"
                     <Card>
                       <CardHeader>
                         <CardTitle>Simple Card</CardTitle>
-                        <CardDescription>Basic card with content</CardDescription>
+                        <CardDescription>
+                          Basic card with content
+                        </CardDescription>
                       </CardHeader>
                       <CardContent>
                         <p>This is a basic card with some content.</p>
@@ -1266,7 +1429,9 @@ import { Label } from "@/components/ui/label"
           <Container>
             <div className="space-y-6">
               <div className="space-y-2">
-                <h2 className="text-2xl font-semibold tracking-tight">Dialog</h2>
+                <h2 className="text-2xl font-semibold tracking-tight">
+                  Dialog
+                </h2>
                 <p className="text-muted-foreground">
                   Modal dialog for user interactions.
                 </p>
@@ -1352,7 +1517,9 @@ import { Label } from "@/components/ui/label"
           <Container>
             <div className="space-y-6">
               <div className="space-y-2">
-                <h2 className="text-2xl font-semibold tracking-tight">Dropdown Menu</h2>
+                <h2 className="text-2xl font-semibold tracking-tight">
+                  Dropdown Menu
+                </h2>
                 <p className="text-muted-foreground">
                   Accessible dropdown menu component.
                 </p>
@@ -1427,7 +1594,9 @@ import { Label } from "@/components/ui/label"
           <Container>
             <div className="space-y-6">
               <div className="space-y-2">
-                <h2 className="text-2xl font-semibold tracking-tight">Tooltip</h2>
+                <h2 className="text-2xl font-semibold tracking-tight">
+                  Tooltip
+                </h2>
                 <p className="text-muted-foreground">
                   Display informative tooltips on hover.
                 </p>
@@ -1492,7 +1661,9 @@ import { Label } from "@/components/ui/label"
           <Container>
             <div className="space-y-6">
               <div className="space-y-2">
-                <h2 className="text-2xl font-semibold tracking-tight">Popover</h2>
+                <h2 className="text-2xl font-semibold tracking-tight">
+                  Popover
+                </h2>
                 <p className="text-muted-foreground">
                   Floating card with content.
                 </p>
@@ -1512,7 +1683,9 @@ import { Label } from "@/components/ui/label"
                       <PopoverContent className="w-80">
                         <div className="grid gap-4">
                           <div className="space-y-2">
-                            <h4 className="font-medium leading-none">Dimensions</h4>
+                            <h4 className="font-medium leading-none">
+                              Dimensions
+                            </h4>
                             <p className="text-sm text-muted-foreground">
                               Set the dimensions for the layer.
                             </p>
@@ -1559,7 +1732,9 @@ import { Label } from "@/components/ui/label"
           <Container>
             <div className="space-y-6">
               <div className="space-y-2">
-                <h2 className="text-2xl font-semibold tracking-tight">Hover Card</h2>
+                <h2 className="text-2xl font-semibold tracking-tight">
+                  Hover Card
+                </h2>
                 <p className="text-muted-foreground">
                   Preview content on hover.
                 </p>
@@ -1620,9 +1795,7 @@ import { Label } from "@/components/ui/label"
             <div className="space-y-6">
               <div className="space-y-2">
                 <h2 className="text-2xl font-semibold tracking-tight">Table</h2>
-                <p className="text-muted-foreground">
-                  Display tabular data.
-                </p>
+                <p className="text-muted-foreground">Display tabular data.</p>
               </div>
 
               <Card>
@@ -1688,10 +1861,10 @@ import { Label } from "@/components/ui/label"
           <Container>
             <div className="space-y-6">
               <div className="space-y-2">
-                <h2 className="text-2xl font-semibold tracking-tight">Pagination</h2>
-                <p className="text-muted-foreground">
-                  Navigate through pages.
-                </p>
+                <h2 className="text-2xl font-semibold tracking-tight">
+                  Pagination
+                </h2>
+                <p className="text-muted-foreground">Navigate through pages.</p>
               </div>
 
               <Card>
@@ -1706,7 +1879,9 @@ import { Label } from "@/components/ui/label"
                         <PaginationPrevious href="#" />
                       </PaginationItem>
                       <PaginationItem>
-                        <PaginationLink href="#" isActive>1</PaginationLink>
+                        <PaginationLink href="#" isActive>
+                          1
+                        </PaginationLink>
                       </PaginationItem>
                       <PaginationItem>
                         <PaginationLink href="#">2</PaginationLink>
@@ -1755,7 +1930,9 @@ import { Label } from "@/components/ui/label"
           <Container>
             <div className="space-y-6">
               <div className="space-y-2">
-                <h2 className="text-2xl font-semibold tracking-tight">Avatar</h2>
+                <h2 className="text-2xl font-semibold tracking-tight">
+                  Avatar
+                </h2>
                 <p className="text-muted-foreground">
                   User avatar with fallback.
                 </p>
@@ -1772,13 +1949,17 @@ import { Label } from "@/components/ui/label"
                       <AvatarImage src="https://github.com/shadcn.png" />
                       <AvatarFallback>CN</AvatarFallback>
                     </Avatar>
-                    
+
                     <Avatar>
-                      <AvatarFallback className="bg-primary text-primary-foreground">JD</AvatarFallback>
+                      <AvatarFallback className="bg-primary text-primary-foreground">
+                        JD
+                      </AvatarFallback>
                     </Avatar>
-                    
+
                     <Avatar className="h-12 w-12">
-                      <AvatarFallback className="bg-secondary">AB</AvatarFallback>
+                      <AvatarFallback className="bg-secondary">
+                        AB
+                      </AvatarFallback>
                     </Avatar>
                   </div>
                 </CardContent>
@@ -1811,7 +1992,9 @@ import { Label } from "@/components/ui/label"
           <Container>
             <div className="space-y-6">
               <div className="space-y-2">
-                <h2 className="text-2xl font-semibold tracking-tight">Breadcrumb</h2>
+                <h2 className="text-2xl font-semibold tracking-tight">
+                  Breadcrumb
+                </h2>
                 <p className="text-muted-foreground">
                   Navigation breadcrumb trail.
                 </p>
@@ -1830,7 +2013,9 @@ import { Label } from "@/components/ui/label"
                       </BreadcrumbItem>
                       <BreadcrumbSeparator />
                       <BreadcrumbItem>
-                        <BreadcrumbLink href="/components">Components</BreadcrumbLink>
+                        <BreadcrumbLink href="/components">
+                          Components
+                        </BreadcrumbLink>
                       </BreadcrumbItem>
                       <BreadcrumbSeparator />
                       <BreadcrumbItem>
@@ -1869,10 +2054,10 @@ import { Label } from "@/components/ui/label"
           <Container>
             <div className="space-y-6">
               <div className="space-y-2">
-                <h2 className="text-2xl font-semibold tracking-tight">Calendar</h2>
-                <p className="text-muted-foreground">
-                  Date picker calendar.
-                </p>
+                <h2 className="text-2xl font-semibold tracking-tight">
+                  Calendar
+                </h2>
+                <p className="text-muted-foreground">Date picker calendar.</p>
               </div>
 
               <Card>
@@ -1911,10 +2096,10 @@ const [date, setDate] = useState<Date>()
           <Container>
             <div className="space-y-6">
               <div className="space-y-2">
-                <h2 className="text-2xl font-semibold tracking-tight">Scroll Area</h2>
-                <p className="text-muted-foreground">
-                  Custom scrollable area.
-                </p>
+                <h2 className="text-2xl font-semibold tracking-tight">
+                  Scroll Area
+                </h2>
+                <p className="text-muted-foreground">Custom scrollable area.</p>
               </div>
 
               <Card>
@@ -1959,7 +2144,9 @@ const [date, setDate] = useState<Date>()
           <Container>
             <div className="space-y-6">
               <div className="space-y-2">
-                <h2 className="text-2xl font-semibold tracking-tight">Separator</h2>
+                <h2 className="text-2xl font-semibold tracking-tight">
+                  Separator
+                </h2>
                 <p className="text-muted-foreground">
                   Visual divider between elements.
                 </p>
@@ -1975,7 +2162,7 @@ const [date, setDate] = useState<Date>()
                     <p className="text-sm">Horizontal separator:</p>
                     <Separator className="my-4" />
                   </div>
-                  
+
                   <div className="flex h-20 items-center gap-4">
                     <p className="text-sm">Left</p>
                     <Separator orientation="vertical" />
@@ -2006,7 +2193,9 @@ const [date, setDate] = useState<Date>()
           <Container>
             <div className="space-y-6">
               <div className="space-y-2">
-                <h2 className="text-2xl font-semibold tracking-tight">Skeleton</h2>
+                <h2 className="text-2xl font-semibold tracking-tight">
+                  Skeleton
+                </h2>
                 <p className="text-muted-foreground">
                   Loading placeholder animations.
                 </p>
@@ -2025,7 +2214,7 @@ const [date, setDate] = useState<Date>()
                       <Skeleton className="h-4 w-[200px]" />
                     </div>
                   </div>
-                  
+
                   <div className="space-y-2">
                     <Skeleton className="h-4 w-full" />
                     <Skeleton className="h-4 w-full" />
@@ -2062,7 +2251,9 @@ const [date, setDate] = useState<Date>()
           <Container>
             <div className="space-y-6">
               <div className="space-y-2">
-                <h2 className="text-2xl font-semibold tracking-tight">Toggle</h2>
+                <h2 className="text-2xl font-semibold tracking-tight">
+                  Toggle
+                </h2>
                 <p className="text-muted-foreground">
                   Two-state button for on/off actions.
                 </p>
@@ -2091,10 +2282,16 @@ const [date, setDate] = useState<Date>()
                       <ToggleGroupItem value="bold" aria-label="Toggle bold">
                         <Bold className="h-4 w-4" />
                       </ToggleGroupItem>
-                      <ToggleGroupItem value="italic" aria-label="Toggle italic">
+                      <ToggleGroupItem
+                        value="italic"
+                        aria-label="Toggle italic"
+                      >
                         <Italic className="h-4 w-4" />
                       </ToggleGroupItem>
-                      <ToggleGroupItem value="underline" aria-label="Toggle underline">
+                      <ToggleGroupItem
+                        value="underline"
+                        aria-label="Toggle underline"
+                      >
                         <Underline className="h-4 w-4" />
                       </ToggleGroupItem>
                     </ToggleGroup>
@@ -2131,9 +2328,7 @@ import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group"
             <div className="space-y-6">
               <div className="space-y-2">
                 <h2 className="text-2xl font-semibold tracking-tight">KBD</h2>
-                <p className="text-muted-foreground">
-                  Keyboard key indicator.
-                </p>
+                <p className="text-muted-foreground">Keyboard key indicator.</p>
               </div>
 
               <Card>
@@ -2147,13 +2342,13 @@ import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group"
                     <Kbd>⌥</Kbd>
                     <Kbd>⇧</Kbd>
                   </div>
-                  
+
                   <div className="flex flex-wrap gap-4">
                     <KbdGroup>
                       <Kbd>⌘</Kbd>
                       <Kbd>K</Kbd>
                     </KbdGroup>
-                    
+
                     <KbdGroup>
                       <Kbd>Ctrl</Kbd>
                       <Kbd>+</Kbd>
@@ -2188,7 +2383,9 @@ import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group"
           <Container>
             <div className="space-y-6">
               <div className="space-y-2">
-                <h2 className="text-2xl font-semibold tracking-tight">Empty State</h2>
+                <h2 className="text-2xl font-semibold tracking-tight">
+                  Empty State
+                </h2>
                 <p className="text-muted-foreground">
                   Display when no data is available.
                 </p>
@@ -2221,7 +2418,7 @@ import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group"
                       description="There was an error loading the data."
                       action={{
                         label: "Try again",
-                        onClick: () => {}
+                        onClick: () => {},
                       }}
                     />
                   </div>
@@ -2263,7 +2460,9 @@ import { ErrorState } from "@/components/ui/error-state"
           <Container>
             <div className="space-y-6">
               <div className="space-y-2">
-                <h2 className="text-2xl font-semibold tracking-tight">Search Bar</h2>
+                <h2 className="text-2xl font-semibold tracking-tight">
+                  Search Bar
+                </h2>
                 <p className="text-muted-foreground">
                   Search input with debounce and clear.
                 </p>
@@ -2276,8 +2475,8 @@ import { ErrorState } from "@/components/ui/error-state"
                 </CardHeader>
                 <CardContent>
                   <div className="max-w-sm">
-                    <SearchBar 
-                      placeholder="Search..." 
+                    <SearchBar
+                      placeholder="Search..."
                       onSearch={(value) => console.log(value)}
                       showClearButton
                     />
@@ -2307,7 +2506,9 @@ import { ErrorState } from "@/components/ui/error-state"
           <Container>
             <div className="space-y-6">
               <div className="space-y-2">
-                <h2 className="text-2xl font-semibold tracking-tight">Copy Button</h2>
+                <h2 className="text-2xl font-semibold tracking-tight">
+                  Copy Button
+                </h2>
                 <p className="text-muted-foreground">
                   Button with copy to clipboard functionality.
                 </p>
@@ -2416,10 +2617,10 @@ import { ErrorState } from "@/components/ui/error-state"
           <Container>
             <div className="space-y-6">
               <div className="space-y-2">
-                <h2 className="text-2xl font-semibold tracking-tight">Carousel</h2>
-                <p className="text-muted-foreground">
-                  Image/card carousel.
-                </p>
+                <h2 className="text-2xl font-semibold tracking-tight">
+                  Carousel
+                </h2>
+                <p className="text-muted-foreground">Image/card carousel.</p>
               </div>
 
               <Card>
@@ -2491,21 +2692,25 @@ import { ErrorState } from "@/components/ui/error-state"
                     >
                       Default Toast
                     </Button>
-                    
+
                     <Button
                       variant="outline"
-                      onClick={() => toast.success("Success!", {
-                        description: "Operation completed",
-                      })}
+                      onClick={() =>
+                        toast.success("Success!", {
+                          description: "Operation completed",
+                        })
+                      }
                     >
                       Success Toast
                     </Button>
-                    
+
                     <Button
                       variant="outline"
-                      onClick={() => toast.error("Error!", {
-                        description: "Something went wrong",
-                      })}
+                      onClick={() =>
+                        toast.error("Error!", {
+                          description: "Something went wrong",
+                        })
+                      }
                     >
                       Error Toast
                     </Button>
@@ -2538,7 +2743,9 @@ toast.error("Error!")`}
           <Container>
             <div className="space-y-6">
               <div className="space-y-2">
-                <h2 className="text-2xl font-semibold tracking-tight">Code Block</h2>
+                <h2 className="text-2xl font-semibold tracking-tight">
+                  Code Block
+                </h2>
                 <p className="text-muted-foreground">
                   Syntax highlighted code display.
                 </p>
@@ -2585,5 +2792,5 @@ toast.error("Error!")`}
 
       <Footer />
     </div>
-  )
+  );
 }
