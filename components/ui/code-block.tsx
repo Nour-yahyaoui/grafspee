@@ -9,6 +9,7 @@ interface CodeBlockProps extends React.HTMLAttributes<HTMLPreElement> {
   showLineNumbers?: boolean
   showCopyButton?: boolean
   title?: string
+  maxHeight?: string
 }
 
 export function CodeBlock({
@@ -17,6 +18,7 @@ export function CodeBlock({
   showLineNumbers = false,
   showCopyButton = true,
   title,
+  maxHeight = 'auto',
   className,
   ...props
 }: CodeBlockProps) {
@@ -27,14 +29,14 @@ export function CodeBlock({
       {/* Header */}
       {(title || showCopyButton) && (
         <div className="flex items-center justify-between border-b bg-muted/30 px-4 py-2">
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 min-w-0 flex-1">
             {title && (
-              <span className="text-sm font-medium text-muted-foreground">
+              <span className="text-sm font-medium text-muted-foreground truncate">
                 {title}
               </span>
             )}
             {language && !title && (
-              <span className="text-xs uppercase text-muted-foreground">
+              <span className="text-xs uppercase text-muted-foreground shrink-0">
                 {language}
               </span>
             )}
@@ -43,8 +45,11 @@ export function CodeBlock({
         </div>
       )}
 
-      {/* Code */}
-      <div className="overflow-x-auto">
+      {/* Code Container - Scrollable */}
+      <div 
+        className="overflow-x-auto overflow-y-auto"
+        style={{ maxHeight: maxHeight !== 'auto' ? maxHeight : undefined }}
+      >
         <pre
           className={cn(
             'p-4 text-sm font-mono leading-relaxed',
@@ -52,17 +57,23 @@ export function CodeBlock({
           )}
           {...props}
         >
-          <code className="text-foreground">
+          <code className="text-foreground block">
             {showLineNumbers
               ? lines.map((line, i) => (
-                  <div key={i} className="flex">
-                    <span className="w-8 shrink-0 select-none text-muted-foreground text-right pr-4">
+                  <div key={i} className="flex min-w-max">
+                    <span className="w-8 shrink-0 select-none text-muted-foreground text-right pr-4 sticky left-0 bg-muted/50">
                       {i + 1}
                     </span>
-                    <span>{line}</span>
+                    <span className="whitespace-pre-wrap break-all md:whitespace-pre">
+                      {line || ' '}
+                    </span>
                   </div>
                 ))
-              : code.trim()}
+              : code.trim().split('\n').map((line, i) => (
+                  <div key={i} className="min-w-max whitespace-pre-wrap break-all md:whitespace-pre">
+                    {line || ' '}
+                  </div>
+                ))}
           </code>
         </pre>
       </div>
