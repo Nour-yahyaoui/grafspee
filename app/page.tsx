@@ -206,7 +206,7 @@ export default function Home() {
       <main className="flex-1">
         {/* Hero Section */}
         <Hero
-          badge="Component Library v2.0"
+          badge="Grafspee v2.0"
           title="Build faster with 60+ components"
           description="A complete UI toolkit with live examples, code snippets, and production-ready components. Perfect for building modern web applications."
           primaryAction={{ label: 'Get Started', href: '#components' }}
